@@ -1,0 +1,45 @@
+# Environnements virtuels
+venv/
+env/
+.venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Data (optionnel selon taille)
+# data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Python cache
+*.egg-info/
+
+# Distribution / builds
+dist/
+build/
+
+# Jupyter runtime
+.jupyter/
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Environment variables
+.env
