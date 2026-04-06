@@ -6,9 +6,9 @@ Ce projet vise à prédire le churn client (résiliation) à partir de données 
 
 -Dataset
 
-Source : (Kaggle / Telco dataset…)
-Nombre de clients : 7043
-Variables principales : tenure, contract, monthly charges…
+Source : (Kaggle / Telco dataset…)   
+Nombre de clients : 7043   
+Variables principales : tenure, contract, monthly charges…  
 
 -Méthodologie
 
