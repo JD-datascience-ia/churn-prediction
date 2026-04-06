@@ -36,9 +36,9 @@ F1-score
 -Résultats
 
      Modèle	        Recall	Precision	F1
-Logistic Regression	0.80	0.49	   0.61
-Random Forest	    0.80	0.49	   0.61
-XGBoost	            0.80	0.49	   0.61
+Logistic Regression	0.80	0.49	   0.61  
+Random Forest	    0.80	0.49	   0.61  
+XGBoost	            0.80	0.49	   0.61  
 
  Les performances étant similaires, cela suggère que les limites viennent davantage des données que du modèle.
 
