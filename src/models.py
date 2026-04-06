@@ -34,10 +34,10 @@ def logistic_gridsearch(cv=5, scoring="recall", n_jobs=-1):
     )
     return grid
 
-def build_randomforest_pipeline():
+def randomforest_pipeline():
     pass
 
-def build_xgboost_pipeline():
+def xgboost_pipeline():
     pass
 
 
