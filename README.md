@@ -16,13 +16,13 @@ Analyse exploratoire des données (EDA)
 
 Préprocessing :
 
-gestion des valeurs manquantes
+Gestion des valeurs manquantes
 encodage des variables
 
 Modélisation :
 
-Logistic Regression
-Random Forest
+Logistic Regression  
+Random Forest  
 XGBoost
 
 Évaluation :
