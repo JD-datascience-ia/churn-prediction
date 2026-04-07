@@ -1,15 +1,21 @@
 import pandas as pd
 
+from pathlib import Path
+
 from src.models import xgboost_model, xgboost_gridsearch
 from src.evaluate import run_cross_validation, evaluate_model
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+
 
 
 def main():
 
-    X_train = pd.read_csv("../data/X_train.csv")
-    X_test = pd.read_csv("../data/X_test.csv")
-    y_train = pd.read_csv("../data/y_train.csv").squeeze()
-    y_test = pd.read_csv("../data/y_test.csv").squeeze()
+    X_train = pd.read_csv("DATA_DIR / X_train.csv")
+    X_test = pd.read_csv("DATA_DIR / X_test.csv")
+    y_train = pd.read_csv("DATA_DIR / y_train.csv").squeeze()
+    y_test = pd.read_csv("DATA_DIR / y_test.csv").squeeze()
 
     model = xgboost_model()
 
