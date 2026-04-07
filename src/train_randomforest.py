@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.models import randomforest_pipeline, random
+from src.models import randomforest_model, randomforest_gridsearch
 from src.evaluate import run_cross_validation, evaluate_model
 
 
@@ -11,16 +11,16 @@ def main():
     y_train = pd.read_csv("../data/y_train.csv").squeeze()
     y_test = pd.read_csv("../data/y_test.csv").squeeze()
 
-    pipeline = logistic_pipeline()
+    model = randomforest_model()
 
-    cv_results = run_cross_validation(pipeline, X_train, y_train, cv=5)
+    cv_results = run_cross_validation(model, X_train, y_train, cv=5)
 
     print("=== Cross-validation results ===")
     for metric_name, values in cv_results.items():
         if metric_name.startswith("test_"):
             print(f"{metric_name}: {values.mean():.4f}")
 
-    grid = logistic_gridsearch(cv=5, scoring="recall", n_jobs=-1)
+    grid = randomforest_gridsearch(cv=5, scoring="recall", n_jobs=-1)
     grid.fit(X_train, y_train)
 
     print("\n=== Best parameters ===")
@@ -31,7 +31,7 @@ def main():
 
 
 
-    grid = logistic_gridsearch(cv=5, scoring="recall", n_jobs=-1)
+    grid = randomforest_gridsearch(cv=5, scoring="recall", n_jobs=-1)
     grid.fit(X_train, y_train)
 
     print("\n=== Best parameters ===")
