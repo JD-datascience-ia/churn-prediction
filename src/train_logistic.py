@@ -30,16 +30,6 @@ def main():
     print(grid.best_score_)
 
 
-
-    grid = logistic_gridsearch(cv=5, scoring="recall", n_jobs=-1)
-    grid.fit(X_train, y_train)
-
-    print("\n=== Best parameters ===")
-    print(grid.best_params_)
-
-    print("\n=== Best CV score ===")
-    print(grid.best_score_)
-
     final_results = evaluate_model(grid.best_estimator_, X_test, y_test)
 
     print("\n=== Test results ===")
