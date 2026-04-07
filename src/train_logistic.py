@@ -11,10 +11,10 @@ DATA_DIR = BASE_DIR / "data"
 
 def main():
 
-    X_train = pd.read_csv("DATA_DIR / X_train.csv")
-    X_test = pd.read_csv("DATA_DIR / X_test.csv")
-    y_train = pd.read_csv("DATA_DIR / y_train.csv").squeeze()
-    y_test = pd.read_csv("DATA_DIR / y_test.csv").squeeze()
+    X_train = pd.read_csv(DATA_DIR / "X_train.csv")
+    X_test = pd.read_csv(DATA_DIR / "X_test.csv")
+    y_train = pd.read_csv(DATA_DIR / "y_train.csv").squeeze()
+    y_test = pd.read_csv(DATA_DIR / "y_test.csv").squeeze()
 
     pipeline = logistic_pipeline()
 
