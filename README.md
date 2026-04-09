@@ -91,13 +91,23 @@ Cependant, certaines différences apparaissent :
 XGBoost maximise le recall, ce qui peut être pertinent si l’objectif est de détecter un maximum de clients susceptibles de churn.  
 Random Forest offre un meilleur équilibre, avec un F1-score légèrement supérieur. 
 
+![Analyse churn tenure](images/churn_tenure_analysis.png)  
+
+Ce graphique montre que le modèle détecte efficacement les churners récents mais a plus de difficultés avec les clients anciens.  
+
 -Amélioration possibles
 
-Feature engineering plus avancé.  
+Feature engineering plus avancé, par exemple sur l'ancienneté.    
 Sélection de variables plus fine.  
 Gestion du déséquilibre des classes (SMOTE, ajustement du threshold).  
 Interprétabilité des modèles (feature importance, SHAP).  
 Déploiement via une application Streamlit.  
+
+-Concusion métier
+
+Un modèle avec un recall élevé permet de détecter la majorité des clients à risque, ce qui peut permettre aux équipes marketing de cibler des actions de rétention.  
+
+Dans un contexte où l’objectif est de minimiser la perte de clients, XGBoost apparaît comme le modèle le plus pertinent grâce à son recall élevé.  
 
 -Reproductibilité  
 
